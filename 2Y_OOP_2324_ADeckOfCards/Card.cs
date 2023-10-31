@@ -24,6 +24,11 @@ namespace _2Y_OOP_2324_ADeckOfCards
             return value;
         }
 
+        public void SetNewValue(int val)
+        {
+            value = val;
+        }
+
         public string GetCardSuit()
         {
             string Suit = "";
