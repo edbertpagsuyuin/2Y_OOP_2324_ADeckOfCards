@@ -145,16 +145,10 @@ namespace _2Y_OOP_2324_ADeckOfCards
                 return "No winner, Player, Dealer, and Computer are Draw.";
             else if ((dval < p1val && c1val < p1val) && (p1val < 21 && dval < 21 && c1val < 21))
                 return "Player Win";
-            //else if ((c1val < p1val) && (p1val < 21 && c1val < 21 && p1val != dval))
-            //    return "Player Win";
             else if ((p1val < c1val && dval < c1val) && (c1val < 21 && p1val < 21 && dval < 21))
                 return "Computer Win";
-            //else if ((dval < c1val) && (c1val < 21 && dval < 21 && c1val != p1val))
-            //    return "Computer Win";
             else if ((c1val < dval && p1val < dval) && (dval < 21 && c1val < 21 && p1val < 21))
                 return "Dealer Win";
-            //else if ((p1val < dval) && (dval < 21 && p1val < 21 && dval != c1val))
-            //    return "Dealer Win";
             else if (dval == c1val)
                 return "Dealer and Computer are Draw";
             else if (dval == p1val)
