@@ -210,5 +210,34 @@ namespace _2Y_OOP_2324_ADeckOfCards
             } while (!isvalid);
         }
 
+        public void CheckWinner(bool isdealer, int opponentval)
+        {
+            string name1 = "Player";
+            string name2 = "Dealer";
+
+            if (isdealer)
+            {
+                name1 = "Dealer";
+                name2 = "Player";
+            }
+
+            if (handvalue > 21 && opponentval > 21)
+                Console.WriteLine($"No winner, {name1} and {name2} Bust");
+            else if (handvalue > 21)
+                Console.WriteLine($"{name1} Bust, {name2} Win");
+            else if (opponentval > 21)
+                Console.WriteLine($"{name2} Bust, {name1} Win");
+            else if (handvalue == opponentval)
+                Console.WriteLine($"No winner, {name1} and {name2} Draw");
+            else if (handvalue == 21)
+                Console.WriteLine($"{name1} Win");
+            else if (opponentval == 21)
+                Console.WriteLine($"{name2} Win");
+            else if (handvalue > opponentval)
+                Console.WriteLine($"{name1} Win");
+            else if (opponentval > handvalue)
+                Console.WriteLine($"{name2} Win");
+        }
+
     }
 }
